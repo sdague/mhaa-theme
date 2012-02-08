@@ -7,12 +7,14 @@
 
 <head>
   <title><?php print $head_title; ?></title>
+  <meta name="viewport" content="width=device-width" />
+  <link href='http://fonts.googleapis.com/css?family=Lustria|Droid+Sans:400,700|Vollkorn:400,700' rel='stylesheet' type='text/css'>
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
 
-<body class="<?php print $body_classes; ?>">
+<body class="bodyblack <?php print $body_classes; ?>">
   <?php if (!empty($admin)) print $admin; ?>
   <div id="page" class="clearfix">
     <div id="site-header" class="container-<?php print $branding_wrapper_width; ?> clearfix">
@@ -28,11 +30,11 @@
           <?php endif; ?>
         <?php endif; ?>
       </div><!-- /#branding -->
-      <?php if ($title_right): ?>
-        <div id="title-right" class="no-mobile grid-<?php print $header_menu_width; ?>">
-          <div><?php print $title_right; ?></div>
-        </div><!-- /#site-menu -->
-        <?php endif; ?>
+      <div id="title-right" class="grid-2">
+        <div><h3>Follow Us</h3>
+        <?php print mhaa2_follow_us(); ?>
+        </div>
+      </div><!-- /#site-menu -->
     </div>
 
     <?php if($header_first || $header_last): ?>
@@ -97,11 +99,11 @@
       <div id="front-center" class="front-block column grid-4 push-4">
         <?php print $front_center; ?>
       </div>
-      <div id="front-right" class="front-block column region grid-4 push-4">
-        <?php print $front_right; ?>
-      </div>
-     <div id="front-left" class="front-block column region grid-4 pull-8">
+     <div id="front-left" class="front-block column region grid-4 pull-4">
         <?php print $front_left; ?>
+      </div>
+      <div id="front-right" class="front-block column region grid-4">
+        <?php print $front_right; ?>
       </div>
       <?php else: ?>
       <div id="front-center" class="front-block column grid-6 push-6">
@@ -113,46 +115,53 @@
     <?php endif; ?>
     </div>
 
-    <div id="main-content-container" class="container-<?php print $content_container_width; ?> clearfix">
-      <div id="main-wrapper" class="column <?php print $main_content_classes; ?>">
-        <?php if (!empty($mission)) {
-          print $mission;
-        }?>
-        <?php if($content_top): ?>
-        <div id="content-top">
-          <?php print $content_top; ?>
-        </div><!-- /#content-top -->
-        <?php endif; ?>
-        <?php if ($tabs): ?>
-          <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
-        <?php endif; ?>
+    <div id="astrographics" class="no-mobile container-<?php print $content_container_width; ?> clearfix">
+      <div id="astrographics-inner" class="grid-12 column region">
+        <div id="blackback">
+          <a href="http://www.wunderground.com/US/NY/Ancram.html?bannertypeclick=sunandmoon"
+             ><img src="http://weathersticker.wunderground.com/weathersticker/sunandmoon/language/www/US/NY/Ancram.gif" alt="Forecast for Ancram NY" alt="Forecast for Ancram NY" border="0"></a>
 
-        <?php if ($title): ?>
-          <h1 class="title" id="page-title"><?php print $title; ?></h1>
-        <?php endif; ?>
+          <a href="http://cleardarksky.com/c/LkTagNYkey.html"
+             ><img class="clearsky" alt="Clear Sky Chart for Lake Taghkanic" title="Clear Sky Chart for Lake Taghkanic" hspace="10" src="http://cleardarksky.com/csk/getcsk.php?id=LkTagNY" border="0"></a>
 
-        <div id="main-content" class="region clearfix">
-        </div><!-- /#main-content -->
+          <a href="http://sohowww.nascom.nasa.gov/data/realtime/realtime-update.html"
+             ><img alt="The Sun courtesy of SOHO" title="The Sun courtesy of SOHO"
+                   src="http://sohowww.nascom.nasa.gov/data/realtime/hmi_igr/512/latest.jpg"
+                   border="0"></a>
 
-        <?php if($content_bottom): ?>
-        <div id="content-bottom">
-          <?php print $content_bottom; ?>
-        </div><!-- /#content-bottom -->
-        <?php endif; ?>
-      </div><!-- /#main-wrapper -->
+          </div>
+        </div>
+      </div>
+    <div id="astrographics-mobile" class="mobile-only container-<?php print $content_container_width; ?> clearfix">
+      <div id="astrographics-inner" class="grid-12 column region">
+        <div id="blackback">
+          <a href="http://www.wunderground.com/US/NY/Ancram.html?bannertypeclick=sunandmoon">
+            <img src="http://weathersticker.wunderground.com/weathersticker/sunandmoon/language/www/US/NY/Ancram.gif" alt="Forecast for Ancram NY" alt="Forecast for Ancram NY" border="0">
+            </a>
+          <a href="http://sohowww.nascom.nasa.gov/data/realtime/realtime-update.html">
+            <img alt="The Sun right now" src="
+                                              http://sohowww.nascom.nasa.gov/data/realtime/hmi_igr/512/latest.jpg">
+            </a>
+            <br/>
+          <a href="http://cleardarksky.com/c/LkTagNYkey.html">
+            <img class="clearsky" alt="Clear Sky Chart for Lake Taghkanic" title="Clear Sky Chart for Lake Taghkanic" hspace="10" src="http://cleardarksky.com/csk/getcsk.php?id=LkTagNY" border="0">
+          </a>
+          </div>
+        </div>
+      </div>
 
-      <?php if ($sidebar_first): ?>
-        <div id="sidebar-first" class="column sidebar region <?php print $sidebar_first_classes; ?>">
-          <?php print $sidebar_first; ?>
-        </div><!-- /#sidebar-first -->
-      <?php endif; ?>
+      <div id="front-bottom-wrapper" class="container-12 clearfix">
+        <div id="front-bottom-center" class="front-block column grid-4 push-4">
+          <?php print $front_bottom_center; ?>
+        </div>
+        <div id="front-bottom-right" class="front-block column region grid-4 push-4">
+          <?php print $front_bottom_right; ?>
+        </div>
+        <div id="front-bottom-left" class="front-block column region grid-4 pull-8">
+          <?php print $front_bottom_left; ?>
+      </div>
 
-      <?php if ($sidebar_last): ?>
-        <div id="sidebar-last" class="column sidebar region <?php print $sidebar_last_classes; ?>">
-          <?php print $sidebar_last; ?>
-        </div><!-- /#sidebar-last -->
-      <?php endif; ?>
-    </div><!-- /#main-content-container -->
+      </div>
 
     <?php if($postscript_one || $postscript_two || $postscript_three || $postscript_four): ?>
     <div id="postscript-wrapper" class="container-<?php print $postscript_container_width; ?> clearfix">

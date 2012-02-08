@@ -7,12 +7,14 @@
 
 <head>
   <title><?php print $head_title; ?></title>
+  <meta name="viewport" content="width=device-width" />
+  <link href='http://fonts.googleapis.com/css?family=Lustria|Droid+Sans:400,700|Vollkorn:400,700' rel='stylesheet' type='text/css'>
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
 
-<body class="<?php print $body_classes; ?>">
+<body class="bodyblack <?php print $body_classes; ?>">
   <?php if (!empty($admin)) print $admin; ?>
   <div id="page" class="clearfix">
     <div id="site-header" class="container-<?php print $branding_wrapper_width; ?> clearfix">
@@ -28,11 +30,11 @@
           <?php endif; ?>
         <?php endif; ?>
       </div><!-- /#branding -->
-      <?php if ($title_right): ?>
-        <div id="title-right" class="no-mobile grid-<?php print $header_menu_width; ?>">
-          <div><?php print $title_right; ?></div>
-        </div><!-- /#site-menu -->
-        <?php endif; ?>
+      <div id="title-right" class="no-mobile grid-2">
+        <div><h3>Follow Us</h3>
+        <?php print mhaa2_follow_us(); ?>
+        </div>
+      </div><!-- /#site-menu -->
     </div>
 
     <?php if($header_first || $header_last): ?>

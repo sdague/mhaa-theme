@@ -23,9 +23,13 @@ scripts[] = js/front-page.js
 
 regions[title_right] = title right
 
-regions[front_right] = front right
-regions[front_center] = front center
 regions[front_left] = front left
+regions[front_center] = front center
+regions[front_right] = front right
+
+regions[front_bottom_left] = front bottom left
+regions[front_bottom_center] = front bottom center
+regions[front_bottom_right] = front bottom right
 
 regions[sidebar_first] = sidebar first
 regions[sidebar_last] = sidebar last

@@ -8,38 +8,94 @@ font, basefont {
 
 /* First, fix the fonts */
 body, caption, th, td, input, textarea, select, option, legend, fieldset  {
-    font-family: "DejaVu Sans", Helvetica, Arial, sans-serif;
+    font-family: Droid Sans, "DejaVu Sans", Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, #site-name {
-    font-family: Ubuntu, "DejaVu Sans", Helvetica, Arial, sans-serif;
+#site-name {
+    font-family: Lustria, Georgia, Times, serif;
+    white-space: nowrap;
 }
 
+h1, h2, h3, #site-menu {
+    font-family: Vollhorn, Georgia, Times, serif;
+    letter-spacing: 0;
+}
+
+#civicrm-menu {
+    position: static;
+}
+
+#title-right h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-family: Lustria, Georgia, Times, serif;
+    font-weight: normal;
+    font-variant: small-caps;
+}
+
+.front-block .views-field-title-1 a,
+h3 a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.views-field-field-status-value a,
 .views-field-title a {
     text-decoration: none;
 }
-a:hover h1 {
-    text-decoration: underline;
+
+ul {
+    list-style-type: disc;
 }
 
 /* Default site name way too large */
 #site-name {
-    font-size: 1.5em;
-    line-height: 2em;
-    padding-left: 1%;
+    font-size: 1.6em;
+    line-height: 3em;
+    padding-left: 2%;
     letter-spacing: 0em;
+    vertical-align: bottom;
+}
+
+#title-right img {
+    height: 24px;
 }
 
 /* Setup colors so we get a background color */
 
 body {
-    background-color: black;
     font-size: 1em;
     color: #23353D;
 }
 
+/* so that the editor isn't stupid */
+body.bodyblack {
+    background-color: black;
+}
+
 a, a:visited {
-    color: #7B96BA;
+    color: #2462C7;
+}
+
+#front-bottom-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.front-block .block {
+    width: 100%;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+a:hover h3,
+a:hover h2,
+a:hover h1 {
+    opacity: 0.7;
 }
 
 #site-header {
@@ -101,13 +157,15 @@ a, a:visited {
 }
 
 h1 {
+    font-size: 1.8em;
+}
+
+.front-block h2,
+h2 {
     font-size: 1.6em;
 }
-h2 {
-    font-size: 1.4em;
-}
 h3, h4, h5, h6 {
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 /* Fix gapping between header and body */
@@ -153,14 +211,24 @@ h3, h4, h5, h6 {
     margin-top: 20px;
 }
 
+#front-page-container .views-field-field-date-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Lustria, Georgia, Times, serif;
+    padding-bottom: 0.5em;
+}
+
+/*
 .front-block .content p {
     text-align: justify;
 }
+*/
 
 .front-block .block {
     display: table;
 }
 
+#front-bottom-wrapper h2,
 .front-block h1 {
     margin-bottom: 0px;
     webkit-border-top-left-radius: 8px;
@@ -170,26 +238,37 @@ h3, h4, h5, h6 {
     -moz-border-top-right-radius: 8px;
     border-top-right-radius: 8px;
     color: white;
-    padding: 10px;
-    margin: -2px -12px 0px;
+    padding: 2px 10px;
+    margin: -2px -10px 0px;
     overflow: hidden;
-    background-color: #953839;
+    background-color: #2E5DA6;
+    font-variant: small-caps;
+    font-size: 1.2em;
 }
 
+.front-block .views-field-view-node {
+    font-size: 0.9em;
+}
+
+#front-left .views-field-view-node a,
 #front-left h1 {
-    background-color: #627CA6;
+    background-color: #2E5DA6;
+    color: white;
 }
 
+#front-center .views-field-view-node a,
 #front-center h1 {
     background-color: #A60800;
+    color: white;
 }
 
+#front-right .views-field-view-node a,
 #front-right h1 {
-    background-color: #42A665;
+    background-color: #1F7A16;
+    color: white;
 }
 
-.front-block .item-list h3 {
-    line-height: 2em;
+.front-block h3 {
     font-size: 1.4em;
     margin-left: 1em;
     margin-bottom: 0;
@@ -202,18 +281,19 @@ h3, h4, h5, h6 {
 
 /* More link that goes to the left */
 .front-block .views-field-view-node a {
-    -webkit-border-bottom-left-radius: 8px;
-    -moz-border-bottom-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    -webkit-border-bottom-right-radius: 5px;
-    -moz-border-bottom-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color:  #8FAFD9;
-    color: black;
+    border-bottom-right-radius: 8px;
     text-decoration: none;
-    padding: 5px 10px;
+    line-height: 1ex;
+    padding: 3px 10px 5px;
     text-align: right;
+    font-size: 1em;
 }
+
+/*
+.front-block .date-display-single {
+    font-weight: bold;
+}*/
 
 
 /** for views that look like pages */
@@ -229,6 +309,36 @@ h3, h4, h5, h6 {
     margin-bottom: 15px;
 }
 
+#astrographics-mobile,
+#astrographics {
+    padding-top: 3ex;
+    padding-bottom: 3ex;
+}
+
+#blackback {
+    text-align: center;
+    vertical-align: top;
+    background-color: #000000;
+    /* height: 150px; */
+    height: auto;
+    display: table;
+    margin: 0px auto;
+    padding: 10px;
+    webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#astrographics-mobile #blackback {
+    padding: 0;
+}
+
+#blackback img {
+    height: 150px;
+    margin: 5px;
+    background-color: white;
+    display: inline;
+}
 
 /* #front-right .item-list h3 { */
 /*     line-height: 2em; */
@@ -249,97 +359,10 @@ h3, h4, h5, h6 {
 /*     border-top-right-radius: 10px; */
 /* } */
 
-
-
 .block p {
     margin-bottom: 1em;
 }
 
-
-/*** Menu Block ***/
-#sidebar-first .block-menu_block {
-    border: 2px #E38556 solid;
-    border-right: none;
-    -webkit-border-top-right-radius: 0;
-    -moz-border-top-right-radius: 0;
-    border-top-right-radius: 0;
-    -webkit-border-bottom-right-radius: 0;
-    -moz-border-bottom-right-radius: 0;
-    border-bottom-right-radius: 0;
-
-}
-
-/* meeting list */
-
-.view-past-meetings h3 {
-    margin: 0px -12px;
-    padding: 0px 12px;
-    background-color: black;
-    color: white;
-}
-.view-past-meetings ul {
-    margin-bottom: 20px;
-}
-
-
-/* sidebar trickery */
-
-#sidebar-first .block-menu_block .content {
-    padding: 0;
-}
-#sidebar-first .block-menu_block h2 {
-    margin-left: 14px;
-}
-
-#sidebar-first .block-menu_block h2 a.active,
-#sidebar-first .block-menu_block li a.active {
-    background-color: white;
-}
-
-
-#sidebar-first .block-menu_block h2 a:hover,
-#sidebar-first .block-menu_block li a:hover {
-    border: 2px black solid;
-    padding: 9px;
-}
-
-#sidebar-first .block-menu_block h2 a,
-#sidebar-first .block-menu_block li a {
-    padding: 10px;
-    display: block;
-    color: black;
-    background-color: #E3AD91;
-    text-decoration: none;
-    text-align: right;
-    -webkit-border-top-left-radius: 8px;
-    -moz-border-top-left-radius: 8px;
-    border-top-left-radius: 8px;
-    -webkit-border-bottom-left-radius: 8px;
-    -moz-border-bottom-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border: 1px #999 solid;
-}
-
-#sidebar-first .block-menu_block h2,
-#sidebar-first .block-menu_block li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 1.4em;
-    font-weight: bold;
-    font-family: "DejaVu Sans", Helvetica, Arial, sans-serif;
-    padding: 0px;
-}
-
-#sidebar-first .block-menu_block h2,
-#sidebar-first .block-menu_block li,
-#sidebar-first .block-menu_block {
-    background-color: #E38556;
-}
-
-#sidebar-first .block-menu_block ul li {
-    list-style-type: none;
-    list-style-image: none;
-}
 
 /*** Pager ***/
 
@@ -395,37 +418,20 @@ ul.primary a {
     background-color: white;
 }
 
-/*** BOX AROUND MEETING ***/
-.sidebar .block {
-
-/**
-#front-right .content .view-upcoming-events,
-#front-left .content { */
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    border: 2px #953839 solid;
-    margin-bottom: 20px;
-
-    /* border: 2px #953839 solid; */
-    /* padding: 5px 10px 0px; */
-    /* margin-right: 10px; */
-    /* margin-bottom: 10px; */
-    /* background-color: #EDEDED; */
-}
-
-
 .sidebar .block .content,
 .main-border-box #main-content {
     padding: 0px 10px;
 }
 
 /* make sure that images don't grow bigger than columns */
-.container-12 img,
 .container-12 img {
     width: auto;
     height: auto;
     max-width: 98%;
+}
+
+.container-12 #Map img {
+    max-width: none;
 }
 
 /* Remove the border at the bottom of .node */
@@ -434,6 +440,29 @@ ul.primary a {
 }
 
 /* Do the upcoming events thing with numbers */
+/* #block-views-upcoming_events-block_1 h3,
+#block-views-upcoming_events-block_1 .content {
+    margin: 0;
+    padding: 0;
+} */
+
+/* front page upcoming block is kind of funky */
+#front-bottom-wrapper .content {
+    margin-top: 0;
+}
+#front-bottom-wrapper h3,
+#front-bottom-wrapper h2 {
+    margin: 0;
+}
+
+#front-bottom-wrapper .views-field-view-node {
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+
+.view-frontpage .views-field-created {
+    font-style: italic;
+}
 
 .view-upcoming-events a {
     text-decoration: none;
@@ -448,17 +477,18 @@ ul.primary a {
 
 .view-upcoming-events .item-list ul li {
     list-style-type: none;
-    margin-left: 4em;
+    margin-left: 2.5em;
     margin-bottom: 1em;
 }
 
-.view-upcoming-events .views-field-field-meeting-date-value-3 {
+.view-upcoming-events .views-field-field-date-value-2 {
     font-family: Modern Antiqua, Georgia, sans-serif;
     width: 1.5em;
     float: left;
     margin-left: -2em;
     font-size: 2em;
     text-align: right;
+    line-height: 0.8em;
     padding-right: 0.5em;
 }
 
@@ -474,19 +504,47 @@ ul.primary a {
 	* { -webkit-text-size-adjust: 100%; }
 } */
 
+.mobile-only {
+    display: none;
+}
+
+#module-filter-wrapper ul {
+    margin-left: 0;
+}
+
 /** @media handheld, only screen and (max-width: 767px) { */
 @media (max-width: 1024px) {
     .container-12 {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-}
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #front-right {
+        width: 98%;
+        left: 0;
+    }
+    #front-center {
+        left: 50%;
+        width: 48%;
+    }
+    #front-left {
+        width: 48%;
+        left: -50%;
+    }
 
 }
 
-@media handheld, only screen and (max-width: 767px) {
-     * { -webkit-text-size-adjust: 100%; }
+@media (max-width: 800px) {
+    #site-name {
+        margin: 0;
+        padding: 0;
+        line-height: 1.4em;
+    }
 
+    #front-left,
+    #front-right,
+    #front-center,
     .container-12 .push-1,
     .container-12 .pull-1,
     .container-12 .push-2,
@@ -513,8 +571,18 @@ ul.primary a {
         left: 0;
     }
 
+    .container-12 .grid-2 {
+        width: 28%;
+    }
+
+    .container-12 .grid-10 {
+        width: 68%;
+    }
+
+    #front-left,
+    #front-right,
+    #front-center,
     .container-12 .grid-1,
-    .container-12 .grid-2,
     .container-12 .grid-3,
     .container-12 .grid-4,
     .container-12 .grid-5,
@@ -522,22 +590,54 @@ ul.primary a {
     .container-12 .grid-7,
     .container-12 .grid-8,
     .container-12 .grid-9,
-    .container-12 .grid-10,
     .container-12 .grid-11,
     .container-12 .grid-12
     {
         width: 98%;
     }
 
+
+    .mobile-only #blackback {
+        text-align: left;
+        width: 100%;
+    }
+
+    .mobile-only #blackback img {
+        margin: 3%;
+    }
+
     .no-mobile {
         display: none;
+    }
+
+    .mobile-only {
+        display: block;
     }
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 480px) {
     /* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
     body, input, textarea {
     font-size: 0.8em;
 }
+
+    .container-12 .grid-2 {
+        width: 38%;
+    }
+
+    .container-12 .grid-10 {
+        width: 58%;
+    }
+
+}
+
+@media (max-width: 320px) {
+    #site-name {
+        font-size: 1em;
+    }
+
+    #title-right img {
+        height: 16px;
+    }
 }
