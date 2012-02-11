@@ -119,15 +119,15 @@
       <div id="astrographics-inner" class="grid-12 column region">
         <div id="blackback">
           <a href="http://www.wunderground.com/US/NY/Ancram.html?bannertypeclick=sunandmoon"
-             ><img src="http://weathersticker.wunderground.com/weathersticker/sunandmoon/language/www/US/NY/Ancram.gif" alt="Forecast for Ancram NY" alt="Forecast for Ancram NY" border="0"></a>
+             ><img src="http://weathersticker.wunderground.com/weathersticker/sunandmoon/language/www/US/NY/Ancram.gif" alt="Forecast for Ancram NY" alt="Forecast for Ancram NY" border="0" width="256" height="150"></a>
 
           <a href="http://cleardarksky.com/c/LkTagNYkey.html"
-             ><img class="clearsky" alt="Clear Sky Chart for Lake Taghkanic" title="Clear Sky Chart for Lake Taghkanic" hspace="10" src="http://cleardarksky.com/csk/getcsk.php?id=LkTagNY" border="0"></a>
+             ><img class="clearsky" alt="Clear Sky Chart for Lake Taghkanic" title="Clear Sky Chart for Lake Taghkanic" hspace="10" src="http://cleardarksky.com/csk/getcsk.php?id=LkTagNY" border="0" width="416" height="150"></a>
 
           <a href="http://sohowww.nascom.nasa.gov/data/realtime/realtime-update.html"
              ><img alt="The Sun courtesy of SOHO" title="The Sun courtesy of SOHO"
                    src="http://sohowww.nascom.nasa.gov/data/realtime/hmi_igr/512/latest.jpg"
-                   border="0"></a>
+                   width="150" height="150" border="0"></a>
 
           </div>
         </div>
@@ -136,15 +136,15 @@
       <div id="astrographics-inner" class="grid-12 column region">
         <div id="blackback">
           <a href="http://www.wunderground.com/US/NY/Ancram.html?bannertypeclick=sunandmoon">
-            <img src="http://weathersticker.wunderground.com/weathersticker/sunandmoon/language/www/US/NY/Ancram.gif" alt="Forecast for Ancram NY" alt="Forecast for Ancram NY" border="0">
+            <img src="http://weathersticker.wunderground.com/weathersticker/sunandmoon/language/www/US/NY/Ancram.gif" alt="Forecast for Ancram NY" alt="Forecast for Ancram NY" border="0" width="256" height="150">
             </a>
           <a href="http://sohowww.nascom.nasa.gov/data/realtime/realtime-update.html">
-            <img alt="The Sun right now" src="
+            <img  width="150" height="150" alt="The Sun right now" src="
                                               http://sohowww.nascom.nasa.gov/data/realtime/hmi_igr/512/latest.jpg">
             </a>
             <br/>
           <a href="http://cleardarksky.com/c/LkTagNYkey.html">
-            <img class="clearsky" alt="Clear Sky Chart for Lake Taghkanic" title="Clear Sky Chart for Lake Taghkanic" hspace="10" src="http://cleardarksky.com/csk/getcsk.php?id=LkTagNY" border="0">
+            <img class="clearsky" alt="Clear Sky Chart for Lake Taghkanic" title="Clear Sky Chart for Lake Taghkanic" hspace="10" src="http://cleardarksky.com/csk/getcsk.php?id=LkTagNY" border="0" width="416" height="150">
           </a>
           </div>
         </div>

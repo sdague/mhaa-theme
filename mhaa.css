@@ -320,8 +320,7 @@ h3, h4, h5, h6 {
     vertical-align: top;
     background-color: #000000;
     /* height: 150px; */
-    height: auto;
-    display: table;
+    width: 870px;
     margin: 0px auto;
     padding: 10px;
     webkit-border-radius: 10px;
@@ -334,10 +333,10 @@ h3, h4, h5, h6 {
 }
 
 #blackback img {
-    height: 150px;
     margin: 5px;
     background-color: white;
-    display: inline;
+    height: 150px;
+    width: auto;
 }
 
 /* #front-right .item-list h3 { */
@@ -482,7 +481,7 @@ ul.primary a {
 }
 
 .view-upcoming-events .views-field-field-date-value-2 {
-    font-family: Modern Antiqua, Georgia, sans-serif;
+    font-family: Vollhorn, Georgia, sans-serif;
     width: 1.5em;
     float: left;
     margin-left: -2em;
@@ -621,7 +620,10 @@ ul.primary a {
     body, input, textarea {
     font-size: 0.8em;
 }
-
+#blackback img {
+    max-width: 96%;
+    height: auto;
+}
     .container-12 .grid-2 {
         width: 38%;
     }
