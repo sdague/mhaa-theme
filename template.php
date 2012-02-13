@@ -192,3 +192,17 @@ function mhaa2_follow_us() {
   return $string;
 
 }
+
+/***
+ * Optimize Javascript
+ */
+
+function _phptemplate_variables($hook, $vars) {
+  if ($hook == 'page') {
+    if(module_exists('javascript_aggregator') && $vars['scripts']) {
+      $vars['scripts'] = javascript_aggregator_cache($vars['scripts']);
+    }
+    return $vars;
+  }
+  return array();
+}
